@@ -110,6 +110,19 @@ class Jco_url_ft extends EE_Fieldtype {
 		}
 	}
 	
+	/**
+	* nohttp: remove the protocol from the url for display 
+	*
+	* @access public
+	* @return string
+	*/
+	
+	public function replace_nohttp($data)
+	{
+	    list($protocol, $url) = explode('//', $data);
+	    return $url;
+	}
+	
 	/*
 	* --------------------------------------------------------------
 	* PRIVATE METHODS
